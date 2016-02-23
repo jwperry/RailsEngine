@@ -8,9 +8,9 @@ namespace :import_csv do
       Customer.create(row.to_h)
     end
 
-    # CSV.foreach("./vendor/assets/csv_data/merchants.csv", headers: true) do |row|
-    #   Merchant.create(row.to_h)
-    # end
+    CSV.foreach("./vendor/assets/csv_data/merchants.csv", headers: true) do |row|
+      Merchant.create(row.to_h)
+    end
 
     # CSV.foreach("./vendor/assets/csv_data/items.csv", headers: true) do |row|
     #   Item.create(row.to_h)
