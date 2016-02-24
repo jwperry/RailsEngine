@@ -86,6 +86,11 @@ FactoryGirl.define do
     updated_at
   end
 
+  factory :invoice_items do
+    quantity
+    unit_price
+  end
+
   sequence :name do |n|
     "name#{n}"
   end
@@ -120,5 +125,9 @@ FactoryGirl.define do
 
   sequence :unit_price do |n|
     ((n+1)*10000).to_s
+  end
+
+  sequence :quantity do |n|
+    n*10
   end
 end
