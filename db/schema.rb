@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20160223065050) do
   create_table "items", force: :cascade do |t|
     t.citext   "name"
     t.citext   "description"
-    t.integer  "unit_price"
+    t.citext   "unit_price"
     t.integer  "merchant_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
