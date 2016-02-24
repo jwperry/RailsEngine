@@ -10,6 +10,7 @@ RSpec.describe Api::V1::IndexCustomersController, type: :controller do
         customers_json = JSON.parse(response.body)
         expect(response.status).to eq 200
         expect(customers_json.count).to eq 2
+        expect(customers_json.last["id"]).to eq customer.id
         expect(customers_json.last["first_name"]).to eq customer.first_name
         expect(customers_json.last["last_name"]).to eq customer.last_name
       end

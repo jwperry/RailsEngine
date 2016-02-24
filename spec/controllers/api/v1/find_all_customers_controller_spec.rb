@@ -16,7 +16,7 @@ RSpec.describe Api::V1::FindAllCustomersController, type: :controller do
       it "returns all matching customers by first_name" do
         customer1 = create(:customer, first_name: "customer_dup_first_name")
         customer2 = create(:customer, first_name: "customer_dup_first_name")
-        get :find_all, name: customer1.first_name, format: :json
+        get :find_all, first_name: customer1.first_name, format: :json
         customers_json = JSON.parse(response.body)
         expect(response.status).to eq 200
         expect(customers_json.count).to eq 2

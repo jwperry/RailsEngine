@@ -10,6 +10,7 @@ RSpec.describe Api::V1::IndexMerchantsController, type: :controller do
         merchants_json = JSON.parse(response.body)
         expect(response.status).to eq 200
         expect(merchants_json.count).to eq 2
+        expect(merchants_json.last["id"]).to eq merchant.id
         expect(merchants_json.last["name"]).to eq merchant.name
       end
     end
