@@ -21,7 +21,13 @@ namespace :import_csv do
     end
 
     CSV.foreach("./vendor/assets/csv_data/transactions.csv", headers: true) do |row|
-      Transaction.create(row.to_h)
+      Transaction.create(
+                         credit_card_number: row["credit_card_number"],
+                         result: row["result"],
+                         invoice_id: row["invoice_id"],
+                         created_at: row["created_at"],
+                         updated_at: row["updated_at"]
+                         )
     end
 
     CSV.foreach("./vendor/assets/csv_data/invoice_items.csv", headers: true) do |row|
