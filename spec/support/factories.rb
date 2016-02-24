@@ -86,7 +86,7 @@ FactoryGirl.define do
     updated_at
   end
 
-  factory :invoice_items do
+  factory :invoice_item do
     quantity
     unit_price
   end
