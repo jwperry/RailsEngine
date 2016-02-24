@@ -9,7 +9,7 @@ class Api::V1::FindAllInvoiceItemsController < ApplicationController
   private
 
   def find_all_params
-    params.permit(:id, :quantity, :unit_price)
+    params.permit(:id, :quantity, :unit_price, :created_at, :updated_at, :item_id, :invoice_id)
   end
 
 end

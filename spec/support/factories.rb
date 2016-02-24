@@ -2,8 +2,8 @@ FactoryGirl.define do
 
   factory :merchant do
     name
-    created_at
-    updated_at
+    created_at "2012-03-27T14:56:35.000Z"
+    updated_at "2012-03-27T14:56:35.000Z"
 
     factory :merchant_with_items do
       transient do
@@ -27,8 +27,8 @@ FactoryGirl.define do
   factory :customer do
     first_name
     last_name
-    created_at
-    updated_at
+    created_at "2012-03-27T14:56:35.000Z"
+    updated_at "2012-03-27T14:56:35.000Z"
 
     factory :customer_with_invoices do
       transient do
@@ -42,8 +42,8 @@ FactoryGirl.define do
 
   factory :invoice do
     status "shipped"
-    created_at
-    updated_at
+    created_at "2012-03-27T14:56:35.000Z"
+    updated_at "2012-03-27T14:56:35.000Z"
 
     factory :invoice_with_transactions do
       transient do
@@ -67,8 +67,8 @@ FactoryGirl.define do
     name
     description
     unit_price
-    created_at
-    updated_at
+    created_at "2012-03-27T14:56:35.000Z"
+    updated_at "2012-03-27T14:56:35.000Z"
 
     factory :item_with_invoices do
       after(:create) do |item|
@@ -82,26 +82,31 @@ FactoryGirl.define do
   factory :transaction do
     credit_card_number
     result
-    created_at
-    updated_at
+    created_at "2012-03-27T14:56:35.000Z"
+    updated_at "2012-03-27T14:56:35.000Z"
   end
 
   factory :invoice_item do
     quantity
     unit_price
+    created_at "2012-03-27T14:56:35.000Z"
+    updated_at "2012-03-27T14:56:35.000Z"
   end
 
   sequence :name do |n|
     "name#{n}"
   end
 
-  sequence :created_at do |n|
-    Time.now-(n*100)
-  end
+  # sequence :created_at do |n|
+  #   Time.now-(n*100)
+  # end
+  
+  # sequence :updated_at do |n|
+  #   Time.now-(n*50)
+  # end
 
-  sequence :updated_at do |n|
-    Time.now-(n*50)
-  end
+  #"Tue, 27 Mar 2012 14:54:09 UTC +00:00"
+  #"2012-03-27T14:56:35.000Z"
 
   sequence :first_name do |n|
     "first_name#{n}"

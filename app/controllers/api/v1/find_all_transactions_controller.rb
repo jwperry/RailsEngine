@@ -9,7 +9,7 @@ class Api::V1::FindAllTransactionsController < ApplicationController
   private
 
   def find_all_params
-    params.permit(:credit_card_number, :result)
+    params.permit(:id, :credit_card_number, :result, :created_at, :updated_at, :invoice_id)
   end
 
 end
