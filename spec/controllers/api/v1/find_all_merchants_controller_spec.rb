@@ -21,8 +21,8 @@ RSpec.describe Api::V1::FindAllMerchantsController, type: :controller do
         expect(merchants_json.count).to eq 2
         expect(merchants_json.first["id"]).to eq merchant1.id
         expect(merchants_json.first["name"]).to eq merchant1.name
-        expect(merchants_json.second["id"]).to eq merchant2.id
-        expect(merchants_json.second["name"]).to eq merchant2.name
+        expect(merchants_json.last["id"]).to eq merchant2.id
+        expect(merchants_json.last["name"]).to eq merchant2.name
       end
 
       it "returns all matching merchants by name case insensitively" do
@@ -34,8 +34,8 @@ RSpec.describe Api::V1::FindAllMerchantsController, type: :controller do
         expect(merchants_json.count).to eq 2
         expect(merchants_json.first["id"]).to eq merchant1.id
         expect(merchants_json.first["name"]).to eq merchant1.name
-        expect(merchants_json.second["id"]).to eq merchant2.id
-        expect(merchants_json.second["name"]).to eq merchant2.name
+        expect(merchants_json.last["id"]).to eq merchant2.id
+        expect(merchants_json.last["name"]).to eq merchant2.name
       end
     end
   end

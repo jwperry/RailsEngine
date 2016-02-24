@@ -6,6 +6,13 @@ FactoryGirl.define do
     updated_at
   end
 
+  factory :customer do
+    first_name
+    last_name
+    created_at
+    updated_at
+  end
+
   sequence :name do |n|
     "name#{n}"
   end
@@ -16,5 +23,13 @@ FactoryGirl.define do
 
   sequence :updated_at do |n|
     Time.now-(n*50)
+  end
+
+  sequence :first_name do |n|
+    "first_name#{n}"
+  end
+
+  sequence :last_name do |n|
+    "last_name#{n}"
   end
 end
