@@ -80,6 +80,7 @@ FactoryGirl.define do
   end
 
   factory :transaction do
+    credit_card_number
     result
     created_at
     updated_at
@@ -103,6 +104,10 @@ FactoryGirl.define do
 
   sequence :last_name do |n|
     "last_name#{n}"
+  end
+
+  sequence :credit_card_number do |n|
+    "0"*(16-n.to_s.length) + "#{n}"
   end
 
   sequence :result, ["success", "failed"].cycle do |n|

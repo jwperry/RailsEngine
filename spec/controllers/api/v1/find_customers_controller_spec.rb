@@ -39,8 +39,8 @@ RSpec.describe Api::V1::FindCustomersController, type: :controller do
         customer_json = JSON.parse(response.body)
         expect(response.status).to eq 200
         expect(customer_json["id"]).to eq customer.id
-        expect(customer_json["first_name"].downcase).to eq customer.first_name.downcase
-        expect(customer_json["last_name"].downcase).to eq customer.last_name.downcase
+        expect(customer_json["first_name"]).to eq customer.first_name
+        expect(customer_json["last_name"]).to eq customer.last_name
       end
 
       it "returns the matching customer by last_name case insensitively" do
@@ -49,8 +49,8 @@ RSpec.describe Api::V1::FindCustomersController, type: :controller do
         customer_json = JSON.parse(response.body)
         expect(response.status).to eq 200
         expect(customer_json["id"]).to eq customer.id
-        expect(customer_json["first_name"].downcase).to eq customer.first_name.downcase
-        expect(customer_json["last_name"].downcase).to eq customer.last_name.downcase
+        expect(customer_json["first_name"]).to eq customer.first_name
+        expect(customer_json["last_name"]).to eq customer.last_name
       end
     end
   end

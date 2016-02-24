@@ -2,8 +2,8 @@ class Api::V1::FindAllCustomersController < ApplicationController
   respond_to :json
 
   def find_all
-    @customer = Customer.where(find_all_params)
-    respond_with @customer
+    @customers = Customer.where(find_all_params)
+    respond_with @customers
   end
 
   private
