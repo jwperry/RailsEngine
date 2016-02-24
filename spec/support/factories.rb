@@ -4,11 +4,83 @@ FactoryGirl.define do
     name
     created_at
     updated_at
+
+    factory :merchant_with_items do
+      transient do
+        items_count 5
+      end
+      after(:create) do |merchant, evaluator|
+        create_list(:item, evaluator.items_count, merchant: merchant)
+      end
+    end
+
+    factory :merchant_with_invoices do
+      transient do
+        invoices_count 5
+      end
+      after(:create) do |merchant, evaluator|
+        create_list(:invoice, evaluator.invoices_count, merchant: merchant)
+      end
+    end
   end
 
   factory :customer do
     first_name
     last_name
+    created_at
+    updated_at
+
+    factory :customer_with_invoices do
+      transient do
+        invoices_count 5
+      end
+      after(:create) do |customer, evaluator|
+        create_list(:invoice, evaluator.invoices_count, customer: customer)
+      end
+    end
+  end
+
+  factory :invoice do
+    status "shipped"
+    created_at
+    updated_at
+
+    factory :invoice_with_transactions do
+      transient do
+        transactions_count 5
+      end
+      after(:create) do |invoice, evaluator|
+        create_list(:transaction, evaluator.transactions_count, invoice: invoice)
+      end
+    end
+
+    factory :invoice_with_items do
+      after(:create) do |invoice|
+        5.times do
+          invoice.items << FactoryGirl.create(:item)
+        end
+      end
+    end
+  end
+
+  factory :item do
+    name
+    description
+    unit_price
+    created_at
+    updated_at
+
+    factory :item_with_invoices do
+      after(:create) do |item|
+        5.times do
+          item.invoices << FactoryGirl.create(:invoice)
+        end
+      end
+    end
+  end
+
+  factory :transaction do
+    result
     created_at
     updated_at
   end
@@ -31,5 +103,17 @@ FactoryGirl.define do
 
   sequence :last_name do |n|
     "last_name#{n}"
+  end
+
+  sequence :result, ["success", "failed"].cycle do |n|
+    n
+  end
+
+  sequence :description do |n|
+    "description#{n}"
+  end
+
+  sequence :unit_price do |n|
+    (n+1)*10000
   end
 end

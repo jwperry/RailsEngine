@@ -12,6 +12,12 @@ Rails.application.routes.draw do
       get :customers, to: "find_customers#find"
       get :customers, to: "find_all_customers#find_all"
       get :customers, to: "random_customers#random"
+
+      get :transactions, to: "index_transactions#index"
+      get :transactions, to: "show_transactions#show"
+      get :transactions, to: "find_transactions#find"
+      get :transactions, to: "find_all_transactions#find_all"
+      get :transactions, to: "random_transactions#random"
     end
   end
 end
