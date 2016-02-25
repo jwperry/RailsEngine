@@ -54,6 +54,15 @@ FactoryGirl.define do
       end
     end
 
+    factory :invoice_with_invoice_items do
+      transient do
+        invoice_items_count 5
+      end
+      after(:create) do |invoice, evaluator|
+        create_list(:invoice_item, evaluator.invoice_items_count, invoice: invoice)
+      end
+    end
+
     factory :invoice_with_items do
       after(:create) do |invoice|
         5.times do
@@ -96,17 +105,6 @@ FactoryGirl.define do
   sequence :name do |n|
     "name#{n}"
   end
-
-  # sequence :created_at do |n|
-  #   Time.now-(n*100)
-  # end
-  
-  # sequence :updated_at do |n|
-  #   Time.now-(n*50)
-  # end
-
-  #"Tue, 27 Mar 2012 14:54:09 UTC +00:00"
-  #"2012-03-27T14:56:35.000Z"
 
   sequence :first_name do |n|
     "first_name#{n}"
