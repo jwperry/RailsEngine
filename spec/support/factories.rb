@@ -35,7 +35,7 @@ FactoryGirl.define do
         invoices_count 5
       end
       after(:create) do |customer, evaluator|
-        create_list(:invoice, evaluator.invoices_count, customer: customer)
+        create_list(:invoice_with_transactions, evaluator.invoices_count, customer: customer)
       end
     end
   end
