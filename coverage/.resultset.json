@@ -9,7 +9,12 @@
         1,
         1,
         null,
-        42,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/Jet/turing/3module/RailsEngine/app/models/invoice.rb": [
@@ -19,15 +24,11 @@
         1,
         1,
         1,
-        null,
-        90,
         null
       ],
       "/Users/Jet/turing/3module/RailsEngine/app/models/transaction.rb": [
         1,
         1,
-        null,
-        155,
         null
       ],
       "/Users/Jet/turing/3module/RailsEngine/app/controllers/api/v1/customer_invoices_controller.rb": [
@@ -138,8 +139,6 @@
         1,
         1,
         1,
-        null,
-        35,
         null
       ],
       "/Users/Jet/turing/3module/RailsEngine/app/controllers/api/v1/find_all_merchants_controller.rb": [
@@ -626,8 +625,20 @@
         null,
         null,
         null
+      ],
+      "/Users/Jet/turing/3module/RailsEngine/app/controllers/api/v1/favorite_merchant_customers_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1456380234
+    "timestamp": 1456384862
   }
 }
