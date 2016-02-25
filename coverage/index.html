@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-02-24T20:30:27-07:00">2016-02-24T20:30:27-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-02-24T20:43:53-07:00">2016-02-24T20:43:53-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -31,9 +31,9 @@
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>44</b> files in total.
-    <b>262</b> relevant lines. 
-    <span class="green"><b>262</b> lines covered</span> and
+    <b>45</b> files in total.
+    <b>268</b> relevant lines. 
+    <span class="green"><b>268</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -272,6 +272,16 @@
       
       <tr>
         <td class="strong"><a href="#56942e87fd267abed4b1ce36d5602d73a3efcba3" class="src_link" title="app/controllers/api/v1/items_merchants_controller.rb">app/controllers/api/v1/items_merchants_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>10</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#eccdc03da9b21e66a8bfb1151a1765a963d37667" class="src_link" title="app/controllers/api/v1/merchant_invoices_controller.rb">app/controllers/api/v1/merchant_invoices_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>10</td>
         <td>6</td>
@@ -447,7 +457,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>8.3</td>
+        <td>9.4</td>
       </tr>
       
       <tr>
@@ -477,7 +487,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>8.0</td>
+        <td>8.8</td>
       </tr>
       
       <tr>
@@ -503,15 +513,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.77
+         1.75
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
-    <b>37</b> files in total.
-    <b>235</b> relevant lines. 
-    <span class="green"><b>235</b> lines covered</span> and
+    <b>38</b> files in total.
+    <b>241</b> relevant lines. 
+    <span class="green"><b>241</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -759,6 +769,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#eccdc03da9b21e66a8bfb1151a1765a963d37667" class="src_link" title="app/controllers/api/v1/merchant_invoices_controller.rb">app/controllers/api/v1/merchant_invoices_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>10</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#f4116bc68cf57cd2765de04c45b4ff0025deb5d6" class="src_link" title="app/controllers/api/v1/random_customers_controller.rb">app/controllers/api/v1/random_customers_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>10</td>
@@ -910,7 +930,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         12.35
+         12.77
        </span>
     </span> hits/line)
   </h2>
@@ -952,7 +972,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>8.3</td>
+        <td>9.4</td>
       </tr>
       
       <tr>
@@ -982,7 +1002,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>8.0</td>
+        <td>8.8</td>
       </tr>
       
       <tr>
@@ -3208,6 +3228,84 @@
   </pre>
 </div>
       
+        <div class="source_table" id="eccdc03da9b21e66a8bfb1151a1765a963d37667">
+  <div class="header">
+    <h3>app/controllers/api/v1/merchant_invoices_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Api::V1::MerchantInvoicesController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  respond_to :json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def merchant</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @invoice = Invoice.find_by(id: params[:id])</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @invoice_merchant = @invoice.merchant</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    respond_with @invoice_merchant</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="f4116bc68cf57cd2765de04c45b4ff0025deb5d6">
   <div class="header">
     <h3>app/controllers/api/v1/random_customers_controller.rb</h3>
@@ -4368,8 +4466,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="52" data-linenumber="8">
-          <span class="hits">52</span>
+        <li class="covered" data-hits="60" data-linenumber="8">
+          <span class="hits">60</span>
           
           <code class="ruby">  default_scope { order(&#39;id ASC&#39;) }</code>
         </li>
@@ -4536,8 +4634,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="29" data-linenumber="5">
-          <span class="hits">29</span>
+        <li class="covered" data-hits="32" data-linenumber="5">
+          <span class="hits">32</span>
           
           <code class="ruby">  default_scope { order(&#39;id ASC&#39;) }</code>
         </li>
