@@ -79,6 +79,15 @@ FactoryGirl.define do
     created_at "2012-03-27T14:56:35.000Z"
     updated_at "2012-03-27T14:56:35.000Z"
 
+    factory :item_with_invoice_items do
+      transient do
+        invoice_items_count 5
+      end
+      after(:create) do |item, evaluator|
+        create_list(:invoice_item, evaluator.invoice_items_count, item: item)
+      end
+    end
+
     factory :item_with_invoices do
       after(:create) do |item|
         5.times do
