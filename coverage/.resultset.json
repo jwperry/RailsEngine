@@ -41,7 +41,7 @@
         1,
         1,
         null,
-        39,
+        64,
         null
       ],
       "/Users/Jet/turing/3module/RailsEngine/app/controllers/api/v1/find_all_invoice_items_controller.rb": [
@@ -69,7 +69,7 @@
         1,
         1,
         null,
-        42,
+        44,
         null
       ],
       "/Users/Jet/turing/3module/RailsEngine/app/controllers/api/v1/find_all_invoices_controller.rb": [
@@ -95,7 +95,7 @@
         1,
         1,
         null,
-        54,
+        74,
         null
       ],
       "/Users/Jet/turing/3module/RailsEngine/app/controllers/api/v1/find_all_items_controller.rb": [
@@ -343,6 +343,18 @@
         null,
         null
       ],
+      "/Users/Jet/turing/3module/RailsEngine/app/controllers/api/v1/items_invoices_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/Jet/turing/3module/RailsEngine/app/controllers/api/v1/items_merchants_controller.rb": [
         1,
         1,
@@ -506,6 +518,6 @@
         null
       ]
     },
-    "timestamp": 1456369659
+    "timestamp": 1456370212
   }
 }
