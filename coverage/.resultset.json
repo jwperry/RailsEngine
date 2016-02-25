@@ -115,7 +115,7 @@
         null,
         null,
         1,
-        68,
+        69,
         null,
         null,
         null,
@@ -125,12 +125,12 @@
         null,
         null,
         1,
-        68,
+        69,
         null,
         null,
         null,
         1,
-        68,
+        69,
         null,
         null,
         1,
@@ -370,6 +370,7 @@
         1,
         1,
         1,
+        1,
         null,
         1,
         1,
@@ -443,7 +444,7 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         null,
@@ -510,11 +511,11 @@
         null,
         null,
         1,
-        14,
+        19,
         null,
         null,
         1,
-        11,
+        16,
         null,
         null,
         1,
@@ -540,11 +541,11 @@
         null,
         null,
         1,
-        68,
+        69,
         null,
         null,
         1,
-        68,
+        69,
         null,
         null,
         null
@@ -1477,6 +1478,24 @@
         null,
         null
       ],
+      "/Users/Jet/turing/3module/RailsEngine/spec/requests/api/v1/transactions_invoices_controller_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/Jet/turing/3module/RailsEngine/app/models/customer.rb": [
         1,
         1,
@@ -1541,7 +1560,7 @@
         1,
         1,
         null,
-        38,
+        40,
         null
       ],
       "/Users/Jet/turing/3module/RailsEngine/app/controllers/api/v1/find_all_invoices_controller.rb": [
@@ -1616,7 +1635,7 @@
         1,
         1,
         null,
-        30,
+        44,
         null
       ],
       "/Users/Jet/turing/3module/RailsEngine/app/controllers/api/v1/find_all_transactions_controller.rb": [
@@ -1952,8 +1971,21 @@
         null,
         null,
         null
+      ],
+      "/Users/Jet/turing/3module/RailsEngine/app/controllers/api/v1/transactions_invoices_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1456367709
+    "timestamp": 1456368203
   }
 }

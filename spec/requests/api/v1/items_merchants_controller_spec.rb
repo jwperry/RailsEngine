@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "merchants" do
   describe "GET items" do
-    it "returns all all items for the specified merchant" do
+    it "returns all items for the specified merchant" do
       merchant = create(:merchant_with_items)
       get "/api/v1/merchants/#{merchant.id}/items"
       merchant_items_json = JSON.parse(response.body)
