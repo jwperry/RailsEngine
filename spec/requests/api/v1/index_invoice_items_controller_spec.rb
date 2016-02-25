@@ -11,7 +11,7 @@ describe "invoice_items" do
       expect(invoice_items_json.count).to eq 2
       expect(invoice_items_json.last["id"]).to eq invoice_item.id
       expect(invoice_items_json.last["quantity"]).to eq invoice_item.quantity
-      expect(invoice_items_json.last["unit_price"]).to eq invoice_item.unit_price
+      expect(invoice_items_json.last["unit_price"].to_d).to eq invoice_item.unit_price
     end
   end
 end

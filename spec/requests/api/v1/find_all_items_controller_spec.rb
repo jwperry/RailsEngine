@@ -10,7 +10,7 @@ describe "items" do
       expect(item_json.first["id"]).to eq item.id
       expect(item_json.first["name"]).to eq item.name
       expect(item_json.first["description"]).to eq item.description
-      expect(item_json.first["unit_price"]).to eq item.unit_price
+      expect(item_json.first["unit_price"].to_d).to eq item.unit_price
     end
 
     it "returns all matching items by name" do
@@ -23,11 +23,11 @@ describe "items" do
       expect(items_json.first["id"]).to eq item1.id
       expect(items_json.first["name"]).to eq item1.name
       expect(items_json.first["description"]).to eq item1.description
-      expect(items_json.first["unit_price"]).to eq item1.unit_price
+      expect(items_json.first["unit_price"].to_d).to eq item1.unit_price
       expect(items_json.last["id"]).to eq item2.id
       expect(items_json.last["name"]).to eq item2.name
       expect(items_json.last["description"]).to eq item2.description
-      expect(items_json.last["unit_price"]).to eq item2.unit_price
+      expect(items_json.last["unit_price"].to_d).to eq item2.unit_price
     end
 
     it "returns all matching items by description" do
@@ -40,16 +40,16 @@ describe "items" do
       expect(items_json.first["id"]).to eq item1.id
       expect(items_json.first["name"]).to eq item1.name
       expect(items_json.first["description"]).to eq item1.description
-      expect(items_json.first["unit_price"]).to eq item1.unit_price
+      expect(items_json.first["unit_price"].to_d).to eq item1.unit_price
       expect(items_json.last["id"]).to eq item2.id
       expect(items_json.last["name"]).to eq item2.name
       expect(items_json.last["description"]).to eq item2.description
-      expect(items_json.last["unit_price"]).to eq item2.unit_price
+      expect(items_json.last["unit_price"].to_d).to eq item2.unit_price
     end
 
     it "returns all matching items by unit_price" do
-      item1 = create(:item, unit_price: "12345")
-      item2 = create(:item, unit_price: "12345")
+      item1 = create(:item, unit_price: 123.45.to_d)
+      item2 = create(:item, unit_price: 123.45.to_d)
       get "/api/v1/items/find_all?unit_price=#{item1.unit_price}"
       items_json = JSON.parse(response.body)
       expect(response.status).to eq 200
@@ -57,11 +57,11 @@ describe "items" do
       expect(items_json.first["id"]).to eq item1.id
       expect(items_json.first["name"]).to eq item1.name
       expect(items_json.first["description"]).to eq item1.description
-      expect(items_json.first["unit_price"]).to eq item1.unit_price
+      expect(items_json.first["unit_price"].to_d).to eq item1.unit_price
       expect(items_json.last["id"]).to eq item2.id
       expect(items_json.last["name"]).to eq item2.name
       expect(items_json.last["description"]).to eq item2.description
-      expect(items_json.last["unit_price"]).to eq item2.unit_price
+      expect(items_json.last["unit_price"].to_d).to eq item2.unit_price
     end
 
     it "returns all matching items by name case insensitively" do
@@ -74,11 +74,11 @@ describe "items" do
       expect(items_json.first["id"]).to eq item1.id
       expect(items_json.first["name"]).to eq item1.name
       expect(items_json.first["description"]).to eq item1.description
-      expect(items_json.first["unit_price"]).to eq item1.unit_price
+      expect(items_json.first["unit_price"].to_d).to eq item1.unit_price
       expect(items_json.last["id"]).to eq item2.id
       expect(items_json.last["name"]).to eq item2.name
       expect(items_json.last["description"]).to eq item2.description
-      expect(items_json.last["unit_price"]).to eq item2.unit_price
+      expect(items_json.last["unit_price"].to_d).to eq item2.unit_price
     end
 
     it "returns all matching items by description case insensitively" do
@@ -91,11 +91,11 @@ describe "items" do
       expect(items_json.first["id"]).to eq item1.id
       expect(items_json.first["name"]).to eq item1.name
       expect(items_json.first["description"]).to eq item1.description
-      expect(items_json.first["unit_price"]).to eq item1.unit_price
+      expect(items_json.first["unit_price"].to_d).to eq item1.unit_price
       expect(items_json.last["id"]).to eq item2.id
       expect(items_json.last["name"]).to eq item2.name
       expect(items_json.last["description"]).to eq item2.description
-      expect(items_json.last["unit_price"]).to eq item2.unit_price
+      expect(items_json.last["unit_price"].to_d).to eq item2.unit_price
     end
   end
 end

@@ -12,7 +12,7 @@ describe "items" do
       expect(items_json.last["id"]).to eq item.id
       expect(items_json.last["name"]).to eq item.name
       expect(items_json.last["description"]).to eq item.description
-      expect(items_json.last["unit_price"]).to eq item.unit_price
+      expect(items_json.last["unit_price"].to_d).to eq item.unit_price
     end
   end
 end

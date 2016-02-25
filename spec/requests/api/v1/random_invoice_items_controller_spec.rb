@@ -9,7 +9,7 @@ describe "invoice_items" do
       expect(response.status).to eq 200
       expect([invoice_item1.id, invoice_item2.id]).to include invoice_item_json["id"]
       expect([invoice_item1.quantity, invoice_item2.quantity]).to include invoice_item_json["quantity"]
-      expect([invoice_item1.unit_price, invoice_item2.unit_price]).to include invoice_item_json["unit_price"]
+      expect([invoice_item1.unit_price, invoice_item2.unit_price]).to include invoice_item_json["unit_price"].to_d
     end
   end
 end

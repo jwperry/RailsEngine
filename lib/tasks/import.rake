@@ -13,7 +13,9 @@ namespace :import_csv do
     end
 
     CSV.foreach("./vendor/assets/csv_data/items.csv", headers: true) do |row|
-      Item.create(row.to_h)
+      decimal_row = row.to_h
+      decimal_row["unit_price"] = decimal_row["unit_price"].to_f / 100
+      Item.create(decimal_row)
     end
 
     CSV.foreach("./vendor/assets/csv_data/invoices.csv", headers: true) do |row|
@@ -31,7 +33,9 @@ namespace :import_csv do
     end
 
     CSV.foreach("./vendor/assets/csv_data/invoice_items.csv", headers: true) do |row|
-      InvoiceItem.create(row.to_h)
+      decimal_row = row.to_h
+      decimal_row["unit_price"] = decimal_row["unit_price"].to_f / 100
+      InvoiceItem.create(decimal_row)
     end
 
   end

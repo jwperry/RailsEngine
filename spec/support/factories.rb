@@ -129,7 +129,7 @@ FactoryGirl.define do
   end
 
   sequence :unit_price do |n|
-    ((n+1)*10000).to_s
+    ((n+1)*1000).to_d
   end
 
   sequence :quantity do |n|

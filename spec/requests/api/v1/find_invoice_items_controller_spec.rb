@@ -9,7 +9,7 @@ describe "invoice_items" do
       expect(response.status).to eq 200
       expect(invoice_item_json["id"]).to eq invoice_item.id
       expect(invoice_item_json["quantity"]).to eq invoice_item.quantity
-      expect(invoice_item_json["unit_price"]).to eq invoice_item.unit_price
+      expect(invoice_item_json["unit_price"].to_d).to eq invoice_item.unit_price
     end
 
     it "returns the matching invoice_item by quantity" do
@@ -19,7 +19,7 @@ describe "invoice_items" do
       expect(response.status).to eq 200
       expect(invoice_item_json["id"]).to eq invoice_item.id
       expect(invoice_item_json["quantity"]).to eq invoice_item.quantity
-      expect(invoice_item_json["unit_price"]).to eq invoice_item.unit_price
+      expect(invoice_item_json["unit_price"].to_d).to eq invoice_item.unit_price
     end
 
     it "returns the matching invoice_item by unit_price" do
@@ -29,7 +29,7 @@ describe "invoice_items" do
       expect(response.status).to eq 200
       expect(invoice_item_json["id"]).to eq invoice_item.id
       expect(invoice_item_json["quantity"]).to eq invoice_item.quantity
-      expect(invoice_item_json["unit_price"]).to eq invoice_item.unit_price
+      expect(invoice_item_json["unit_price"].to_d).to eq invoice_item.unit_price
     end
   end
 end
